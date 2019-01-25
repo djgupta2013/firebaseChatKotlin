@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1098333742747",
+    "firebase_url": "https://fir-chatkotlin-8e322.firebaseio.com",
+    "project_id": "fir-chatkotlin-8e322",
+    "storage_bucket": "fir-chatkotlin-8e322.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098333742747:android:02b59e8cc2d01207",
+        "android_client_info": {
+          "package_name": "com.wildnet.firebasechatkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098333742747-j4co32ufhd7p3mbdge0v4j4s882o6baq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wildnet.firebasechatkotlin",
+            "certificate_hash": "bed97f9de81d88732b08d4eb1795c0aa911234b5"
+          }
+        },
+        {
+          "client_id": "1098333742747-g5d8d1trlectt67tqsto480d9rd1l5e8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr2YLBEqcbclUPwsvfEdKZSzzalQ-srTg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098333742747-g5d8d1trlectt67tqsto480d9rd1l5e8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

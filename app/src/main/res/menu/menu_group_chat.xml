@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_userDetail"
+        android:orderInCategory="100"
+        android:title="Group detail"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_leaveUser"
+        android:orderInCategory="100"
+        android:title="Leave group"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_addUser"
+        android:orderInCategory="100"
+        android:title="add user"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_deleteUser"
+        android:orderInCategory="100"
+        android:title="delete user"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_deleteGroup"
+        android:orderInCategory="100"
+        android:title="@string/delete_group"
+        app:showAsAction="never"
+        android:visible="false"/>
+
+
+</menu>

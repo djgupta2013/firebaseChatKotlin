@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_messageUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/message"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_makeGroupAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/make_group_admin"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_removeUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="@string/remove_user"/>
+
+    <TextView
+        android:id="@+id/tv_dismissAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="@string/dismiss_as_admin"/>
+
+</LinearLayout>

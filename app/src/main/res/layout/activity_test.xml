@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activity.TestActivity">
+
+    <EditText
+        android:id="@+id/et_lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="lat"
+        android:layout_marginTop="100dp"/>
+
+    <EditText
+        android:id="@+id/et_long"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_lat"
+        android:hint="long"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_long"
+        android:text="Submit"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_submit"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

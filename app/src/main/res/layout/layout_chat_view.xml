@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_imageRightSet"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/setRightChatImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true" />
+
+        <TextView
+            android:id="@+id/setRightImageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:text="10:10"
+            android:textColor="#ffff"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_imageLeftSet"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/rl_imageRightSet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/setLeftChatImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true" />
+
+        <TextView
+            android:id="@+id/setLeftImageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:text="10:10"
+            android:textColor="#ffff"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+    <me.himanshusoni.chatmessageview.ChatMessageView
+        android:id="@+id/RightChatView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="5dp"
+        app:cmv_arrowGravity="start"
+        app:cmv_arrowMargin="3dp"
+        app:cmv_arrowPosition="right"
+        app:cmv_backgroundColor="#884dca60"
+        app:cmv_backgroundColorPressed="#FFBABABA"
+        app:cmv_contentPadding="10dp"
+        app:cmv_cornerRadius="3dp"
+        app:cmv_showArrow="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/setRightChatMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/setRightChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setRightChatMsg"
+            android:layout_marginTop="5dp"
+            android:textSize="10dp" />
+
+    </me.himanshusoni.chatmessageview.ChatMessageView>
+
+    <me.himanshusoni.chatmessageview.ChatMessageView
+        android:id="@+id/LeftChatView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RightChatView"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:visibility="gone"
+        app:cmv_arrowGravity="start"
+        app:cmv_arrowMargin="3dp"
+        app:cmv_arrowPosition="left"
+        app:cmv_backgroundColor="#888bdaf7"
+        app:cmv_backgroundColorPressed="#FFBABABA"
+        app:cmv_contentPadding="10dp"
+        app:cmv_cornerRadius="3dp"
+        app:cmv_showArrow="true"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/setLeftChatMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/setLeftChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setLeftChatMsg"
+            android:layout_marginTop="5dp"
+            android:textSize="10dp" />
+
+    </me.himanshusoni.chatmessageview.ChatMessageView>
+
+</RelativeLayout>

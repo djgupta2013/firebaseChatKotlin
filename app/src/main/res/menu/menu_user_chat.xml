@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_userDetail"
+        android:orderInCategory="100"
+        android:title="User Profile"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_userBlock"
+        android:orderInCategory="100"
+        android:title="Block user"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_userUnblock"
+        android:orderInCategory="100"
+        android:title="Unblock user"
+        app:showAsAction="never" />
+
+</menu>

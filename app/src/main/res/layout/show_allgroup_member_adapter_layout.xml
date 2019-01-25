@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/tv_groupUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:text="text"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv_groupUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_groupUserName"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="2sp"
+        android:text=""
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="5dp"
+        android:textSize="15dp"
+        android:text=""
+        android:textColor="#75dcba"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/tv_groupUserEmail"/>
+
+
+</RelativeLayout>
