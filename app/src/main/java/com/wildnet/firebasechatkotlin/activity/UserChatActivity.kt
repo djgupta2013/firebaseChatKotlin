@@ -97,7 +97,6 @@ class UserChatActivity : AppCompatActivity(), View.OnClickListener {
         })
 
         mEmojiIcons!!.addEmojiconEditTextList(edittext_hani_chatbox)
-
         edittext_hani_chatbox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 Log.e("afterTextChanged", "afterTextChanged")
