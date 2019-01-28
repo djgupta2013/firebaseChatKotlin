@@ -67,7 +67,7 @@ class UserChatActivity : AppCompatActivity(), View.OnClickListener {
             userEmail = currentUser.email!!
         }
         iv_backUserList.setOnClickListener {
-            if (intent.getStringExtra("imageSend") == "yes"  || intent.getIntExtra("msgCheck",0) == 1) {
+            if (intent.getStringExtra("imageSend") == "yes" || intent.getIntExtra("msgCheck", 0) == 1) {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 startActivity(intent)
@@ -334,21 +334,20 @@ class UserChatActivity : AppCompatActivity(), View.OnClickListener {
         try {
             Log.d("heel", wallpaperDirectory.toString())
             val f = File(wallpaperDirectory, ((Calendar.getInstance()
-                    .getTimeInMillis()).toString() + ".jpg"))
+                    .timeInMillis).toString() + ".jpg"))
             f.createNewFile()
             val fo = FileOutputStream(f)
             fo.write(bytes.toByteArray())
             MediaScannerConnection.scanFile(this,
-                    arrayOf(f.getPath()),
+                    arrayOf(f.path),
                     arrayOf("image/jpeg"), null)
             fo.close()
-            Log.d("TAG", "File Saved::--->" + f.getAbsolutePath())
+            Log.d("TAG", "File Saved::--->" + f.absolutePath)
 
-            return f.getAbsolutePath()
+            return f.absolutePath
         } catch (e1: IOException) {
             e1.printStackTrace()
         }
-
         return ""
     }
 
@@ -373,8 +372,6 @@ class UserChatActivity : AppCompatActivity(), View.OnClickListener {
         }.addOnCanceledListener {
             Log.e("saveImageToFirebase", "fail")
         }
-
-
     }
 
     private fun setChatToFirebase(userChatModel: UserChatModel) {

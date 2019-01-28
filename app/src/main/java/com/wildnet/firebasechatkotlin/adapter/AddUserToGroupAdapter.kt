@@ -55,7 +55,7 @@ class AddUserToGroupAdapter(userModelList: List<UserModel>, allGroupUserList1: L
             holder.userName.text = allUserList[p1].name
             holder.userEmail.text = allUserList[p1].email
         } else {
-            holder.rlAddUser.setBackgroundColor(Color.GRAY)
+            holder.rlAddUser.setBackgroundColor(Color.TRANSPARENT)
             holder.userName.text = allUserList[p1].name
             holder.userEmail.text = mContext.getString(R.string.already_added)
         }

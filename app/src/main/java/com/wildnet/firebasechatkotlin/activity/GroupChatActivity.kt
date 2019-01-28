@@ -115,6 +115,11 @@ class GroupChatActivity : AppCompatActivity(), View.OnClickListener {
         })
     }
 
+    override fun onResume() {
+        super.onResume()
+
+    }
+
     override fun onBackPressed() {
         super.onBackPressed()
         val groupTypingModel = GroupTypingModel(getCurrentUser(), getUserName(this@GroupChatActivity),

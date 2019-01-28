@@ -36,7 +36,7 @@ class UserListFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        if (isOnline(context!!)) {
+        if (!isOnline(context!!)  || isOnline(context!!)) {
             recyclerViewUserList.visibility = View.VISIBLE
             tv_noInternet.visibility = View.GONE
             auth = FirebaseAuth.getInstance()
@@ -48,8 +48,8 @@ class UserListFragment : Fragment() {
             recyclerViewUserList.layoutManager = recyclerViewLayoutManager
             getAllUser()
         } else {
-            tv_noInternet.visibility = View.VISIBLE
-            recyclerViewUserList.visibility = View.GONE
+           /* tv_noInternet.visibility = View.VISIBLE
+            recyclerViewUserList.visibility = View.GONE*/
         }
     }
 

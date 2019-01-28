@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.view.Window
+import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.database.FirebaseDatabase
@@ -32,6 +33,8 @@ class ImageShowActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_image_show)
         supportActionBar!!.hide()
 
+        val win = window
+        win.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setImageAndNameInToolbar()
         iv_image.setOnClickListener(this)
         tv_userChatName.text = intent.getStringExtra("")
@@ -45,6 +48,7 @@ class ImageShowActivity : AppCompatActivity(), View.OnClickListener {
         iv_backUserChat.setOnClickListener {
             super@ImageShowActivity.onBackPressed()
         }
+
     }
 
     private fun setImageAndNameInToolbar() {
@@ -149,5 +153,7 @@ class ImageShowActivity : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(this, "not delete", Toast.LENGTH_SHORT).show()
                 }
     }
+
+
 
 }

@@ -7,14 +7,21 @@
     tools:context=".activity.ImageShowActivity">
 
 
-    <ImageView
+   <!-- <ImageView
         android:id="@+id/iv_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/chat_background_image" />
+        android:src="@drawable/chat_background_image" />-->
+
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+        android:id="@+id/iv_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:scaleType="centerCrop" />
 
     <FrameLayout
         android:id="@+id/frameLayout"

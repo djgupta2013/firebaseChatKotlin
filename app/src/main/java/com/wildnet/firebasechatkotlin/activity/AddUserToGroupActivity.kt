@@ -3,6 +3,7 @@ package com.wildnet.firebasechatkotlin.activity
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.os.Bundle
+import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -19,7 +20,11 @@ import com.wildnet.firebasechatkotlin.model.UserModel
 import kotlinx.android.synthetic.main.activity_add_user_to_group.*
 import java.util.*
 
-class AddUserToGroupActivity : AppCompatActivity() {
+class AddUserToGroupActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
+
+    override fun onRefresh() {
+        swipeRefreshLayout.isRefreshing=false
+    }
 
     private var recyclerViewLayoutManager: RecyclerView.LayoutManager? = null
     private var progressBar: ProgressDialog? = null
@@ -34,6 +39,7 @@ class AddUserToGroupActivity : AppCompatActivity() {
         supportActionBar!!.hide()
         groupName = intent.getStringExtra("groupName")
         getAllUser()
+        swipeRefreshLayout.setOnRefreshListener(this)
         getAllGroupUser()
         iv_backUserList.setOnClickListener {
             super@AddUserToGroupActivity.onBackPressed()
@@ -72,7 +78,6 @@ class AddUserToGroupActivity : AppCompatActivity() {
             }
         })
     }
-
 
     private fun getAllGroupUser() {
         val rootRef = FirebaseDatabase.getInstance().reference
